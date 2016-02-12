@@ -1,0 +1,30 @@
+INSERT INTO tasks 
+	(title, priority, taskStatus, category)
+VALUES 
+	("Read homework assignment", 3, 1, "DigHT 215"),
+	("Read Scriptures in LS", 3, 1, "REL A 250"),
+	("Take quiz", 4, 1, "REL A 250"),
+	("Create project proposal", 5, 1, "TEE 200"),
+	("Upload portfolio website to domain", 1, 1, "Personal"),
+	("Finish client model in PAT", 2, 1, "Personal"),
+	("Buy shoes", 5, 1, "Personal"),
+	("Allow couple cancellations in OPAL", 2, 1, "LIFE"),
+	("Write outline for education paper", 3, 1, "Personal"),
+	("Create HTML page with database info", 3, 1, "DigHT 350")
+    
+CREATE TABLE tasks (
+	taskID INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(100) NOT NULL,
+	priority INT(10) UNSIGNED NULL,
+	taskStatus TINYINT(1) UNSIGNED NOT NULL,
+	category VARCHAR(100) NOT NULL
+)
+
+SELECT title, category FROM tasks WHERE category = "Personal" OR category = "LIFE";
+SELECT title, priority FROM tasks WHERE priority BETWEEN 3 AND 5 ORDER BY priority DESC;
+SELECT title FROM tasks WHERE taskStatus = 1;
+
+SELECT * FROM tasks ORDER BY priority DESC
+SELECT * FROM tasks ORDER BY category ASC
+
+SELECT * FROM tasks ORDER BY priority DESC, category ASC

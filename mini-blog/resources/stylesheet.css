@@ -1,0 +1,63 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url("img/November.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+h1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -90px;
+    width: 180px;
+    padding: 10px;
+    color: white;
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    margin-left: -50%;
+    width: 100%;
+    padding: 5px;
+    background: linear-gradient(red, blue);
+}
+
+nav ul {
+    width: 75%;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+}
+nav li {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    background: gray;
+    margin: 0 10px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.text-background {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    margin-left: -37.5%;
+    border-radius: 15px;
+    background: white;
+    opacity: 0.5;
+    width: 75%;
+    height: 100%;
+}
+
+.text {
+    color: black;
+}
