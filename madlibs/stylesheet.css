@@ -1,0 +1,45 @@
+body {
+    background-color: antiquewhite;
+    font-family: sans-serif;
+}
+form {
+    width: 250px;
+}
+form input {
+    width: 200px;
+    margin: 5px 25px;
+    line-height: 2em;
+}
+.radio {
+    float: right;
+    width: 212px;
+    text-align: center;;
+}
+.radio input {
+    margin: 0px;
+    margin-right: 50px;
+    width: auto;
+}
+form p {
+    margin: 10px;
+    text-align: center;
+}
+
+#story {
+    width: 500px;
+}
+
+#input {
+    width: 500px;
+}
+
+.btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 25px;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #888888;
+    border: none;
+}
