@@ -42,6 +42,13 @@ body {
     font-size: 1.25em;
 }
 
+#edit-item {
+    background-color:beige;
+    width: 400px;
+    font-size: 1.25em;
+    margin: 10px;
+}
+
 #submit {
     float: left;
     height: 25px;
@@ -68,4 +75,18 @@ body {
 
 header {
     text-align: center;
+}
+
+.edit {
+    display: inline-block;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    border: 1px solid brown;
+    margin: 7px 5px;
+    float: right;
+    cursor: pointer;
+    padding: 0px;
+
 }

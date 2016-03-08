@@ -41,6 +41,22 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             )
         );
     }
+    elseif (isset($_POST['text']))
+    {
+        $taskID = trim(filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING));
+        $text = trim(filter_input(INPUT_POST, 'text', FILTER_SANITIZE_STRING));
+        
+        $query = "UPDATE tasks 
+                    SET title = :text 
+                    WHERE taskID = :taskID";
+        $result = $db->prepare($query);
+        $result->execute(
+            array(
+                "taskID" => $taskID,
+                "text" => $text
+            )
+        );
+    }
     else 
     {
         echo "NOTHING!";

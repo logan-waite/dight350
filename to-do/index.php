@@ -29,6 +29,7 @@
                     echo "<div class='row'>";
                     echo "<button class='checkbox $status' value='{$item['taskID']}' name='check'></button>";
                     echo "<div class='items'>{$item['title']}</div>";
+                    echo "<button class='edit' value='{$item['taskID']} name='edit'>Edit</button>";
                     echo "</div>";
                 }
             ?>
@@ -69,8 +70,31 @@
                     })
                 }
             }
-
         });
+            
+        $('.edit').click(function (event) {
+            if ($(this).html() == 'Edit')
+            {
+                var text = $(this).prev().html();
+            
+                $(this).prevAll('.checkbox').css('display', 'none');
+                $(this).prev().replaceWith("<input id='edit-item' type='text' value='"+text+"'>");
+                $(this).css('width', '50px').html("Submit");   
+            }
+            else
+            {
+                var value = $(this).prevAll('.checkbox').attr('value');
+                var text = $(this).prev('#edit-item').val();
+                console.log(text);
+                $.post("items.php", {id:value, text:text}, function (result) {
+                    //console.log(result);
+                   location.reload();
+                
+                })
+            }
+
+        })
+            
         </script>
     </body>
 </html>
